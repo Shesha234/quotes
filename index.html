@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+
+#myDIV {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: auto;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 8;
+  left: 0;
+  
+  text-align: center;
+	
+  background: url(img3.jpg) no-repeat center center fixed; 
+ /* -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+
+  background-image: url("img6.jpg");
+ 
+}
+.center{
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="center">
+<h1 >Quotes of the day</h1>
+
+
+<button onclick="myFunction()">Next Quote</button>
+</div>
+  <h1 id="myDIV">Quote</h1>
+
+<script>
+function myFunction() {
+   
+/*}
+function getRandomImage(){*/
+        var myImages1 = new Array ();
+        myImages1[1] = "img1.jpg";
+        myImages1[2] = "img2.jpg";
+        myImages1[3] = "img3.jpg";
+        myImages1[4] = "img5.jpg";
+        myImages1[5] = "img4.jpg";
+        var rnd = Math.floor(Math.random() * myImages1.length);
+        if(rnd == 0){
+            rnd = 1;
+        }
+        /*document.write('<img class="who" src="' + myImages1[rnd] + '">');
+		document.getElementById("myDIV").style.backgroundImage = myImages1[rnd];*/
+		return document.getElementById("myDIV").innerHTML = '<img src="'+myImages1[rnd]+'" />';
+    }
+</script>
+
+</body>
+</html>
